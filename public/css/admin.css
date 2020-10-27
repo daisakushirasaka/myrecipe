@@ -1,12 +1,15 @@
+@charset "UTF-8";
+
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #000;
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #505050;
+  padding-top: 55px;
 }
 
 .navbar-laravel {
-  background-color: #000;
+  background-color: #505050;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -24,18 +27,90 @@ body {
 
 .list-group-item {
   border-color: #fff;
-  background-color: #000;
+  background-color: #505050;
 }
 
 .login-box {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #505050;
 }
 
 .login-header {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #505050;
 }
 
 .login-body {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #505050;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+}
+
+.recipe-create {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 23px;
+  /*文字サイズ*/
+  font-weight: bold;
+  text-align: center;
+  border: solid #ff7bae 3px;
+  /*線で囲う*/
+  border-radius: 20px;
+  width: 50%;
+  height: 50px;
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: #ff3c87;
+  /*文字色*/
+  text-decoration: none;
+  /*下線を表示させない*/
+  background-color: #2e2d2d;
+}
+
+.recipe-create :hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.recipe-index {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 23px;
+  /*文字サイズ*/
+  font-weight: bold;
+  text-align: center;
+  border: solid #ff7bae 3px;
+  /*線で囲う*/
+  border-radius: 20px;
+  width: 50%;
+  height: 50px;
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: #ff3c87;
+  /*文字色*/
+  text-decoration: none;
+  /*下線を表示させない*/
+  background-color: #2e2d2d;
+}
+
+.recipe-index :hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
 }
 

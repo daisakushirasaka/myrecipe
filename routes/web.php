@@ -11,9 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+
+// create画面のview表示アクション
+Route::get('admin/create', 'RecipeController@add')->middleware('auth');
+
+// create画面の新規作成アクション
+Route::post('admin/create', 'RecipeController@create');
+
+
+
+
+
+
 
 Auth::routes();
 
