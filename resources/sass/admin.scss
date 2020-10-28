@@ -1,13 +1,13 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(240, 240, 240);
-  color: rgb(80, 80, 80);
-  padding-top: 55px;
+  background-color: rgb(202, 201, 201);
+  color: rgb(63, 62, 62);
+  padding-top: 50px;
 }
 
 .navbar-laravel {
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(68, 68, 68);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -57,45 +57,56 @@ body {
   transform: translate(-50%,-50%);
   /*以下装飾*/
   margin:0;/*余計な隙間を除く*/
-  font-size: 23px;/*文字サイズ*/
+  font-size: 20px;/*文字サイズ*/
   font-weight: bold;
   text-align: center;
-  border: solid rgb(255, 123, 174) 3px; /*線で囲う*/
+  border: solid rgb(255, 123, 174) 2px; /*線で囲う*/
   border-radius: 20px;
   width: 50%;
-  height: 50px;
-  padding: 7px;/*文字と線の間の余白*/
+  height: 40px;
+  padding: 3px;/*文字と線の間の余白*/
   color: rgb(255, 60, 135);/*文字色*/
   text-decoration: none;/*下線を表示させない*/
   background-color: rgb(46, 45, 45);
   }
 
-.recipe-create :hover{/*カーソルを当てたとき*/
-  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
-  }
-
 .recipe-index {
   position: absolute;
-  top: 14%;
+  top: 18%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   /*以下装飾*/
   margin:0;/*余計な隙間を除く*/
-  font-size: 23px;/*文字サイズ*/
+  font-size: 20px;/*文字サイズ*/
   font-weight: bold;
   text-align: center;
-  border: solid rgb(255, 123, 174) 3px; /*線で囲う*/
+  border: solid rgb(255, 123, 174) 2px; /*線で囲う*/
   border-radius: 20px;
   width: 50%;
-  height: 50px;
-  padding: 7px;/*文字と線の間の余白*/
+  height: 40px;
+  padding: 3px;/*文字と線の間の余白*/
   color: rgb(255, 60, 135);/*文字色*/
   text-decoration: none;/*下線を表示させない*/
   background-color: rgb(46, 45, 45);
   }
 
-.recipe-index :hover{/*カーソルを当てたとき*/
-  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+.about-box {
+    position: relative;
+}
+
+.about-box img {
+  width: 100%;
+  }
+
+.about-box h5 {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
   }

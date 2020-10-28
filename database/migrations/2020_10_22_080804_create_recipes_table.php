@@ -16,7 +16,7 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title'); // レシピのタイトルを保存するカラム
-            $table->string('body');  // レシピの本文を保存するカラム
+            $table->text('body');  // レシピの本文を保存するカラム
             $table->string('image_path')->nullable();  // レシピ画像のパスを保存するカラム
             $table->timestamps();
         });
