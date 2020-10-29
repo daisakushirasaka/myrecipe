@@ -33,7 +33,7 @@ Route::get('about', 'RecipeController@about')->name("about");
 // edit画面における削除用のpostアクション
 Route::get('recipe/delete', 'RecipeController@delete')->middleware('auth');
 
-
+Route::get('/index', 'UserRecipeController@index');
 
 Auth::routes();
 

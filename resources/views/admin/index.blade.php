@@ -22,13 +22,13 @@
     <div class="row">
         <div class="list-recipe col-md-12 mx-auto">
             <div class="table-responsive">
-                <table class="table table-light table-hover table-bordered text-nowrap">
+                <table class="table table-light table-hover table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th class="text-center">ID</th>
                             <th class="text-center">レシピ名</th>
                             <th class="text-center">レシピ説明</th>
-                            <th class="text-center">編集・削除</th>
+                            <th class="text-center">操作</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,12 +38,32 @@
                                 <td>{{ \Str::limit($recipe->title, 20) }}</td>
                                 <td>{{ \Str::limit($recipe->body, 20) }}</td>
                                 <td>
+
                                     <div class="text-center">
-                                        <a href="{{ action('RecipeController@edit', ['id' => $recipe->id]) }}">編集</a>
+                                        <a class="btn btn-primary btn-sm" href="{{ action('RecipeController@edit', ['id' => $recipe->id]) }}" role="button">編集</a>
                                     </div>
                                     <div class="text-center">
-                                        <a href="{{ action('RecipeController@delete', ['id' => $recipe->id]) }}">削除</a>
+                                        <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#testModal"　href="{{ action('RecipeController@delete', ['id' => $recipe->id]) }}">削除</a>
                                     </div>
+                                
+                                    <!-- ボタン・リンククリック後に表示される画面の内容 -->
+                                    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4>$recipe->title 削除確認画面</h4></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label>データを削除しますか？</label>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                                                    <button type="button" class="btn btn-danger">削除</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </td>
                             </tr>
                         @endforeach
@@ -52,5 +72,6 @@
             </div>
         </div>
     </div>
+    <div class="pagination">{{ $posts->links() }}</div>
 </div>
 @endsection

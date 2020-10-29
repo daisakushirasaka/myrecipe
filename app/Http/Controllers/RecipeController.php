@@ -51,7 +51,7 @@ class RecipeController extends Controller
             $posts = Recipe::where('title','like','%'.$cond_title.'%')->get();
         } else {
             // それ以外はすべてのニュースを取得する
-            $posts = Recipe::all();
+            $posts = Recipe::latest()->paginate(8);
         }
         return view('admin.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }

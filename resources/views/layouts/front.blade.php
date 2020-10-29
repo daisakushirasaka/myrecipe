@@ -18,24 +18,25 @@
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-        
 
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSの読み込み --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-        
+        <link href="{{ asset('css/front.css') }}" rel="stylesheet">
         {{-- fontawesomeの読み込み --}}
-       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     </head>
     <body>
         <div id="app">
-            <div class='fixed-top'>
-            {{-- 画面上部に表示するナビゲーションバーです。 --}}                
+            <div class='fixed-top'>            
+            {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
                     <a class="navbar-brand " href="/myrecipe/public"><i class="fas fa-utensils"></i> HAHAごはん</a>
+
+                    <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://localhost:8888/myrecipe/public/index" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+                    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -49,51 +50,20 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/myrecipe/public">TOPページ</a>
-                                <a class="dropdown-item" href="/myrecipe/public/about">HAHAごはんの想い</a>                                
-                                <a class="dropdown-item" href="/myrecipe/public/admin/create">レシピ作成</a>
-                                <a class="dropdown-item" href="/myrecipe/public/admin/index">レシピ一覧</a>
+                                <a class="dropdown-item" href="/myrecipe/public">HAHAごはん公式サイト</a>
+                                <a class="dropdown-item" href="/myrecipe/public/about">HAHAごはんの想い</a>
                                 <a class="dropdown-item" href="/myrecipe/public/index">レシピを送る</a>
                             </div>
-                        </li>
-                    
-                    
+                        </li>                      
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                        {{ __('ログアウト') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>    
                     </ul>
+                    </div>
                 </div>
             </nav>
-            </div>            
+            </div>
+            {{-- ここまでナビゲーションバー --}}
+
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')

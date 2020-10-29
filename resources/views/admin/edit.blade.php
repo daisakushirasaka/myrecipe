@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>レシピ</h2>
+            <h2>レシピ編集</h2>
             <form action="{{ action('RecipeController@update') }}" method="post" enctype="multipart/form-data">
                 @if (count($errors) > 0)
                     <ul>
@@ -31,7 +31,7 @@
                     <div class="col-md-10">
                         <input type="file" class="form-control-file" name="image">
                         <div class="form-text text-info">
-                            設定中: {{ $recipe_form->image_path }}
+                        {{ $recipe_form->image_path }}
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
