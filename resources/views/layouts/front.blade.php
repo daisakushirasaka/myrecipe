@@ -33,9 +33,9 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <a class="navbar-brand " href="/myrecipe/public"><i class="fas fa-utensils"></i> HAHAごはん</a>
+                    <a class="navbar-brand " href="/"><i class="fas fa-utensils"></i> HAHAごはん</a>
 
-                    <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://localhost:8888/myrecipe/public/index" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+                    <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://agile-harbor-21723.herokuapp.com/index" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
                     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +49,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/myrecipe/public">HAHAごはん公式サイト</a>
-                                <a class="dropdown-item" href="/myrecipe/public/about">HAHAごはんの想い</a>
-                                <a class="dropdown-item" href="/myrecipe/public/index">レシピを送る</a>
+                                <a class="dropdown-item" href="/">HAHAごはん公式サイト</a>
+                                <a class="dropdown-item" href="/about">HAHAごはんの想い</a>
+                                <a class="dropdown-item" href="/index">レシピを送る</a>
                             </div>
                         </li>                      
                     <!-- Right Side Of Navbar -->
