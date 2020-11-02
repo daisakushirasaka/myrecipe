@@ -15,7 +15,7 @@
 
     <!-- LINEのソーシャルプラグイン設置 -->
     <div class="line-icon">
-        <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://localhost:8888/myrecipe/public/" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+        <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://agile-harbor-21723.herokuapp.com" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
         <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
     </div>
 </div>
