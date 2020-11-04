@@ -90,7 +90,7 @@ class RecipeController extends Controller
         // 該当するデータを上書きして保存する
         $recipe->fill($recipe_form)->save();
 
-        return redirect('admin/index');
+        return redirect('admin/index/');
     }
 
     public function about() {

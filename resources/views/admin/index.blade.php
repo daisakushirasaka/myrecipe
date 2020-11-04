@@ -43,11 +43,11 @@
                                         <a class="btn btn-primary btn-sm" href="{{ action('RecipeController@edit', ['id' => $recipe->id]) }}" role="button">編集</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#testModal"　href="{{ action('RecipeController@delete', ['id' => $recipe->id]) }}">削除</a>
+                                        <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"　href="{{ action('RecipeController@delete', ['id' => $recipe->id]) }}">削除</a>
                                     </div>
                                 
                                     <!-- ボタン・リンククリック後に表示される画面の内容 -->
-                                    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -58,7 +58,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                                                    <button type="button" class="btn btn-danger">削除</button>
+                                                    <button type="button" class="btn btn-danger" data-toggle="modal">削除</button>
                                                 </div>
                                             </div>
                                         </div>
