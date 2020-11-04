@@ -51,7 +51,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4>$recipe->title 削除確認画面</h4></h4>
+                                                    <h4>削除確認画面</h4></h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <label>データを削除しますか？</label>

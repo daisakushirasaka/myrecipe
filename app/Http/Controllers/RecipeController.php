@@ -103,7 +103,7 @@ class RecipeController extends Controller
         $recipe = Recipe::find($request->id);
         // 削除する
         $recipe->delete();
-        return redirect('admin/index');
+        return redirect('admin/index/');
     }  
 
 
